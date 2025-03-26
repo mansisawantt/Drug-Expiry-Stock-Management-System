@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expiry Alerts</title>
+</head>
+<body>
+    <h1>Near-Expiry Medicines</h1>
+    {% if medicines %}
+        <ul>
+            {% for med in medicines %}
+                <li>{{ med['medicine_name'] }} - Expiry: {{ med['expiry_date'] }} - Stock: {{ med['stock_quantity'] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No medicines expiring soon.</p>
+    {% endif %}
+</body>
+</html>
